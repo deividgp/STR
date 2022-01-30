@@ -1,0 +1,16 @@
+Exercici_POSIX_1
+Lliurament obligatòri, compta per la nota de pràctiques final.
+
+Implementació d'un planificador executiu ciclic amb 3 tasques.
+--------------------------------------------------------------
+1.- Periòdes de les tasques: T1 = 50 ms, T2 = 100 ms, T3 = 150 ms
+2.- El codi de cadascuna de les tasques el podeu trobar al moodle al fitxet cyclic_test.c
+3.- Dels mecanismes vistos al laboratori (periodic-1.c, periodic-2.c, periodic-3.c i periodic-4.c), podeu fer servir el que volgueu, com millor precisió pogueu obtenir millor es puntuarà la pràctica.
+4.- Consells:
+4.1.- Calcula el temps de cicle menor.
+4.2.- Calcula el temps de cicle major.
+4.3.- Amb els calculs podem determinar cada quan es necessita un event.
+4.4.- Que hem de fer quan el timer acaba?
+
+5.- Proveu amb els següents periòdes
+T1 = 60 ms, T2 = 80 ms, T3 = 120 ms
