@@ -84,8 +84,8 @@ void task3(void)
 
 int main(int argc, char *argv[])
 {
-    /*int res;
-    pid_t child;
+    int res;
+    /*pid_t child;
 
     res = start_periodic_timer(1000000, 50000);
     if (res < 0) {
@@ -152,7 +152,7 @@ int main(int argc, char *argv[])
     if (res ==0) {
       t = start_periodic_timer(2000000, 50000);
       while (1) {
-        wait_next_activation();
+        wait_next_activation(t);
         task1();
       }
     }
@@ -161,7 +161,7 @@ int main(int argc, char *argv[])
     if (res == 0) {
       t = start_periodic_timer(2000000, 100000);
       while (1) {
-        wait_next_activation();
+        wait_next_activation(t);
         task2();
       }
     }
@@ -170,7 +170,7 @@ int main(int argc, char *argv[])
     if (res == 0) {
       t = start_periodic_timer(2000000, 150000);
       while (1) {
-        wait_next_activation();
+        wait_next_activation(t);
         task3();
       }
     }
