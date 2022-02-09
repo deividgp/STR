@@ -6,7 +6,7 @@
 #include <time.h>
 #include <stdint.h>
 #include <signal.h>
-#include <unistd.h>*
+#include <unistd.h>
 
 static sigset_t sigset;
 static void wait_next_activation(void)
