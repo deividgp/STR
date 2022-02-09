@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
     int res;
     pid_t child;
 
-    res = start_periodic_timer(1000000, 20000);
+    res = start_periodic_timer(2000000, 20000);
     if (res < 0) {
         perror("Start Periodic Timer");
 
