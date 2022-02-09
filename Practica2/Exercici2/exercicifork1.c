@@ -1,4 +1,4 @@
-/*#include <sys/types.h>
+#include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -6,19 +6,7 @@
 #include <time.h>
 #include <stdint.h>
 #include <signal.h>
-#include <unistd.h>*/
-#include <stdlib.h>
-#include <sys/time.h>
-#include <time.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <string.h>
-#include <strings.h>
-#include <sys/types.h>
-#include <ctype.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <unistd.h>
+#include <unistd.h>*
 
 static sigset_t sigset;
 static void wait_next_activation(void)
@@ -85,7 +73,7 @@ void task3(void)
 int main(int argc, char *argv[])
 {
     int res;
-    /*pid_t child;
+    pid_t child;
 
     res = start_periodic_timer(1000000, 50000);
     if (res < 0) {
@@ -144,40 +132,7 @@ int main(int argc, char *argv[])
         }
         compt2++;
         compt3++;
-    }*/
-    int res, dummy;
-    struct periodic_task *t;
-
-    res = fork();
-    if (res ==0) {
-      t = start_periodic_timer(2000000, 50000);
-      while (1) {
-        wait_next_activation(t);
-        task1();
-      }
     }
-
-    res = fork();
-    if (res == 0) {
-      t = start_periodic_timer(2000000, 100000);
-      while (1) {
-        wait_next_activation(t);
-        task2();
-      }
-    }
-
-    res = fork();
-    if (res == 0) {
-      t = start_periodic_timer(2000000, 150000);
-      while (1) {
-        wait_next_activation(t);
-        task3();
-      }
-    }
-
-    wait(&dummy);
-    wait(&dummy);
-    wait(&dummy);
 
     return 0;
 }
