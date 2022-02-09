@@ -1,0 +1,7 @@
+Exercici 2 - POSIX
+1.- Repetiu l'exercici 1 creant nous processos amb la instrucció fork(), en comptes de cridar a les funcions directament.
+
+2.- Penjat al moodle teniu un exemple de com funciona l'instrucció fork().
+	- fork() crea un nou procés duplicant el codi del procés que el crea, el procés nou es el procés fill, i el procés que crea aquest fill es anomenat procés pare.
+	- Els dos processos funcionen en un espai separat de memòria ni que tinguin el mateix contingut.
+	- La funció fork() retorna 0 al procés fill si s'ha creat correctament i -1 si no s'ha creat correctament el fill, també retorna el PID del procés fill al pare
