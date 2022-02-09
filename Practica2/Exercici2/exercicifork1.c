@@ -152,7 +152,7 @@ int main(int argc, char *argv[])
     if (res ==0) {
       t = start_periodic_timer(2000000, 50000);
       while (1) {
-        wait_next_activation(t);
+        wait_next_activation();
         task1();
       }
     }
@@ -161,7 +161,7 @@ int main(int argc, char *argv[])
     if (res == 0) {
       t = start_periodic_timer(2000000, 100000);
       while (1) {
-        wait_next_activation(t);
+        wait_next_activation();
         task2();
       }
     }
@@ -170,7 +170,7 @@ int main(int argc, char *argv[])
     if (res == 0) {
       t = start_periodic_timer(2000000, 150000);
       while (1) {
-        wait_next_activation(t);
+        wait_next_activation();
         task3();
       }
     }
