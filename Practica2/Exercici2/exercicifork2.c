@@ -10,12 +10,6 @@
 #include <string.h>
 #include <strings.h>
 #include <stdlib.h>
-
-#include <sys/time.h>
-#include <time.h>
-#include <stdint.h>
-#include <stdio.h>
-
 #include <ctype.h>
 
 static sigset_t sigset;
